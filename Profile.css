@@ -1,0 +1,217 @@
+/* style.css */
+
+/* =================== Body =================== */
+body {
+  margin: 0;
+  height: 100vh;                  /* สูงเต็มหน้าจอ */
+  display: flex;
+  justify-content: center;        /* จัดกึ่งกลางแนวนอน */
+  align-items: center;            /* จัดกึ่งกลางแนวตั้ง */
+  background-color: #fffbea;
+  font-family: "Tahoma", sans-serif;
+}
+
+/* =================== Container =================== */
+.container {
+  text-align: left;
+  width: 100%;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+/* =================== Back Button =================== */
+.back-btn {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background: linear-gradient(to right, #ff4fa3, #ff6fcf);
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.back-btn a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.back-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* =================== Text Box =================== */
+.text-box {
+  background: linear-gradient(145deg, #fff0f6, #ffe6f0);
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.text-box b {
+  font-size: 20px;
+  color: #d6336c;
+}
+.text-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(255, 79, 163, 0.3);
+}
+
+/* =================== Sidebar =================== */
+.sidebar {
+  position: fixed;
+  top: 160px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar a {
+  background: linear-gradient(to right, #ff4fa3, #ff7fcf);
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sidebar a:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(255, 79, 163, 0.4);
+}
+
+/* =================== Profile Picture =================== */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border: 4px solid red;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-pic:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* =================== Profile Box =================== */
+.profile-box {
+  background: linear-gradient(to bottom, #ffb6c1, #ff4f4f);
+  padding: 20px;
+  width: 300px;
+  border-radius: 20px;
+  color: black;
+  text-align: left;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+.profile-box:hover {
+  animation: bounceUp 0.5s ease forwards;
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 30px rgba(255, 75, 163, 0.4);
+  background: linear-gradient(to bottom, #ffc1d1, #ff5f5f);
+}
+
+/* =================== Profile Title =================== */
+.profile-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 40px;
+  background: linear-gradient(to bottom, #ffb6c1, #ff4f4f);
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+  animation: slideIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+.profile-title:hover {
+  animation: bounceUp 0.5s ease forwards;
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 15px 25px rgba(255, 79, 79, 0.5);
+  background: linear-gradient(to bottom, #ff8fc1, #ff6f6f);
+}
+
+/* =================== Profile Header =================== */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: -500px;  /* ระยะห่างจากขอบบน */
+  text-align: center;
+  transform: translateX(800px); /* ขยับไปขวา */
+}
+
+/* =================== Animations =================== */
+@keyframes slideIn {
+  0% { transform: translateX(-50px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceUp {
+  0%   { transform: translateY(0) scale(1); }
+  30%  { transform: translateY(-15px) scale(1.05); }
+  50%  { transform: translateY(-10px) scale(1.03); }
+  70%  { transform: translateY(-15px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes bounceHover {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.1); }
+  50%  { transform: scale(0.95); }
+  70%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounceClick {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(0.9); }
+  50%  { transform: scale(1.1); }
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* =================== Responsive =================== */
+/* Tablet */
+@media (max-width: 1024px) {
+  .profile-header { gap: -15px; }
+  .profile-pic { width: 100px; height: 100px; }
+  .profile-title { font-size: 20px; padding: 12px 50px; left: -100px; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .profile-pic { width: 80px; height: 80px; }
+  .profile-title { font-size: 18px; padding: 8px 30px; left: 0; }
+  .profile-box { max-width: 100%; }
+}

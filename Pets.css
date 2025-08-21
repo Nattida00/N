@@ -1,0 +1,82 @@
+/* รีเซ็ต */
+body {
+  margin: 0;
+  font-family: "Tahoma", sans-serif;
+  background-color: #fffbe9;
+  text-align: center;
+}
+
+/* แถบเมนู */
+.menu-bar {
+  background: #f45197;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.menu-bar a {
+  background: #fef9e7;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.menu-bar a:hover {
+  background: #ffd9ec;
+}
+
+/* เนื้อหา */
+.content h2 {
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* กล่องแมว */
+.pets {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.pet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+}
+
+.pet img {
+  width: 150px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* ป้ายชื่อแมว */
+.pet-name {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 6px 20px;
+  border: 4px solid black;
+  border-radius: 25px;
+}
+
+.pet-name.red {
+  background-color: #ff4d4d;
+  color: black;
+}
+
+.pet-name.pink {
+  background-color: #ffb6e0;
+  color: black;
+}
